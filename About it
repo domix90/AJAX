@@ -1,3 +1,28 @@
 XMLHttpRequest Object, what AJAX stands for, and the four steps to creating and sending a XHR request
 
 https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+
+Ajax programming process in 4 steps :
+
+1. Create XMLHTTP REQUEST OBJECT
+2. DEFINE A CALLBACK FUNCTION
+3. OPEN A REQUEST
+4. SEND THE REQUEST
+
+ <script>
+       1. Create XMLHTTP REQUEST OBJECT
+          var xhr = new XMLHttpRequest();
+        2. DEFINE A CALLBACK FUNCTION
+            xhr.onreadystatechange = function () {
+              if ( xhr.readyState === 4){
+              document.getElementById('ajax').innerHTML = xhr.responseText;
+          }
+        };
+        3. OPEN A REQUEST
+           xhr.open('GET', 'sidebar.html');
+        4. SEND THE REQUEST
+          function sendAJAX() {
+             xhr.send();
+             document.getElementById('load').style.display = "none";
+        };
+  </script>
