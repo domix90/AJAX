@@ -20,3 +20,29 @@ Then it's not from the same origin, and it's forbidden.
 4. Switching Hosts is also not allowed. 
 An Ajax request located at www.myserver.com can't talk to db.myserver.com.
 Even though the two share the same domain, myserver.com, they're different hosts WWW and DB.
+
+
+SO THE ABOVE ARE THE LIMITATIONS OF AJAX. 
+HOW TO CIRCUMVENT THOSE LIMITATIONS? 
+
+a. Web proxy 
+
+Web servers are not limited by THE SAME ORIGIN POLICY that is why there is a possibility of setting up a script in PHP or Ruby On Rails
+that asks for information from another Web Server. Then we can use ajax to talk to the script on our site,
+which talks to the other site, and returns the data to our page. This makes sure the ajax part stays within the same website, and
+obeys the same origin policy.
+
+b. JSONP - JSON with PADDING 
+
+linking to JavaScript files across domains is a common technique when
+working with popular JavaScript libraries like jQuery.
+In fact, this is how CDNs, or Content Delivery Networks, work.
+A CDN hosts files that other sites can use.
+Google, for example,hosts many different javascript libraries, like the popular jQuery library.
+You can link to Google's CDN to download jQuery instead of putting the jQuery javascript file on your own server, which would waste disk space and
+your server's processing power.
+
+c. CORS - Cross Origin Resource Sharing (Access Control Allow Origin.)
+
+It's a W3C recommendation. 
+It does require some set up on the servers part.But allows the server to accept requests from other domains.
