@@ -1,0 +1,5 @@
+In general, you can use Ajax to communicate from one page to another page
+on the same web server but not to access other web servers.
+
+In other words,a webpage on your site can't use Ajax to communicate with someone else's bank.
+And a webpage on another site can't use JavaScript to access content on your website.
