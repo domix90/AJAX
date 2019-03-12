@@ -1,4 +1,4 @@
-In general, you can use Ajax to communicate from one page to another page
+1. In general, you can use Ajax to communicate from one page to another page
 on the same web server but not to access other web servers.
 
 In other words,a webpage on your site can't use Ajax to communicate with someone else's bank.
@@ -11,3 +11,12 @@ I can also talk to files on the same server within subfolders.
 However, I'll run into problems requesting data from another website 
 If it's not from the same server.
 Then it's not from the same origin, and it's forbidden.
+
+
+2. Switching Protocols from HTTP to HTTPS is not allowed. 
+
+3. Switching Port numbers. Swithcing from default port 80 to lets say 8888 is not allowed. 
+
+4. Switching Hosts is also not allowed. 
+An Ajax request located at www.myserver.com can't talk to db.myserver.com.
+Even though the two share the same domain, myserver.com, they're different hosts WWW and DB.
