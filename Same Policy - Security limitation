@@ -3,3 +3,11 @@ on the same web server but not to access other web servers.
 
 In other words,a webpage on your site can't use Ajax to communicate with someone else's bank.
 And a webpage on another site can't use JavaScript to access content on your website.
+
+
+For example, I have Ajax code on a page located at www.myserver.com.
+I can use Ajax to talk to a PHP file on that server.
+I can also talk to files on the same server within subfolders.
+However, I'll run into problems requesting data from another website 
+If it's not from the same server.
+Then it's not from the same origin, and it's forbidden.
