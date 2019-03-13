@@ -1,0 +1,18 @@
+JavaScript Object Notation - it's using javascript to pass information around. It uses basic JS objects and arrays to store data. 
+
+EXAMPLE OF JSON FORMATED AN OBJECT:
+
+{
+  "name" : "Dom";
+  "phone" : "796-592-212"
+}
+
+Notice lack of comma at the last value. 
+
+
+                                                      Requirement for JSON formatted data.
+                                                      
+First, in regular JavaScript objects keys don't have to be quoted.
+However, valid JSON requires not only quotes around the
+property name, but they must also be double quotes.
+Single quotes won't work. Strings also require double quotes.
