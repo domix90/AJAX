@@ -27,3 +27,11 @@ Single quotes won't work. Strings also require double quotes.
 
 JSON is picky. To check if the JSON data is correctly formatted I can use. 
 https://jsonlint.com/
+
+Placing the JS at the end allows the page to fully load before the JavaScript is loaded. This will often speed up the page load, 
+as it isn't waiting for the JavaScript to load before finishing the HTML rendering.
+However, if elements on the page are reliant explicitly on JavaScript, as it is here, 
+the JavaScript will need to load completely before the page loads, or the page will not function properly. 
+In case of AJAX, you're using JavaScript to retrieve data from the server to render on the page, 
+but if the JavaScript is run after the page loads, then the page doesn't have any data it needs to render, 
+so your data will not show on the page.
