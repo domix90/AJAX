@@ -24,3 +24,6 @@
   
   JSON.parse(); - take a string and tries to convert it into an object 
   JSON.parse method is built-in almost every browser out there - evern Internet Explorer 8. 
+
+Arrays are considered a type of object in Java Script 
+use console.log(typeof var name) to check what browser thinks the element is. 
